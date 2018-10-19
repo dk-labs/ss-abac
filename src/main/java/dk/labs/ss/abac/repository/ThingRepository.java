@@ -1,4 +1,7 @@
 package dk.labs.ss.abac.repository;
 
-public interface ThingRepository {
+import dk.labs.ss.abac.model.Thing;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ThingRepository extends JpaRepository<Thing, Long> {
 }

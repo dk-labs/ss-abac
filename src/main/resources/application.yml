@@ -1,5 +1,15 @@
 spring:
-  security:
-    user:
-      name: dima
-      password: password
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:localhost;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password:
+
+users:
+    users:
+      - id: noadmin
+        password: "{noop}pass"
+        role: USER
+      - id: admin
+        password: "{noop}pass"
+        role: ADMIN
